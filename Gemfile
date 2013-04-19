@@ -9,6 +9,8 @@ gem 'sqlite3'
 
 gem 'haml'
 gem 'inherited_resources'
+gem 'formtastic'
+gem 'activerecord-reputation-system'
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -57,4 +59,5 @@ group :development do
   gem "guard-bundler", "~> 1.0.0"
   gem "guard-cucumber", "~> 1.4.0"
   gem "guard-rspec", "~> 2.5.3"
+  gem "rb-fsevent"
 end

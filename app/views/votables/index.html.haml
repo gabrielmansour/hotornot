@@ -1,1 +1,8 @@
-List Votables
+%h2 List Votables
+
+- @votables.each do |votable|
+  .votable
+    = link_to votable do
+      = image_tag votable.image_url, alt: votable, title: votable
+      %span.name= votable
+

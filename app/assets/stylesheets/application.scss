@@ -1,0 +1,12 @@
+/*
+ *= require_self
+ *= require formtastic
+ */
+
+@import "blueprint";
+/*
+ *= require_tree .
+ */
+
+@include blueprint;
+@include blueprint-typography;

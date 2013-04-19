@@ -16,6 +16,6 @@ class VotablesController < ApplicationController
 
     value = params[:type] == "hot" ? 1 : -1
     @votable.add_or_update_evaluation(:votes, value, current_user)
-    redirect_to :back, notice: "You Voted! Doesn't that feel good?"
+    redirect_to :back, notice: "You Voted! Doesn't it feel good to do your civic duty?"
   end
 end

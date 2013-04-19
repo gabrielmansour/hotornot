@@ -1,0 +1,9 @@
+%h3.name= @votable
+
+= image_tag @votable.image_url, alt: @votable, title: @votable
+
+%p= votable.description
+
+.count= pluralize @votable.reputation_for(:votes).to_i, "vote"
+
+

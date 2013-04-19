@@ -6,6 +6,18 @@
     = javascript_include_tag :application
     = csrf_meta_tags
   %body
-    -#%h1 Hot or Not
+    %header(style="overflow:hidden")
+      %h1(style="float:left") Hot or Not: Canadian Edition
+      #session(style="float:right")
+        - if current_user
+          Logged in as
+          = current_user.username
+          |
+          = link_to "Logout", logout_path
+        - else
+          = link_to "Login", login_path
+
+    - flash.each do |key,value|
+      .flash{ class: key }= value
 
     = yield

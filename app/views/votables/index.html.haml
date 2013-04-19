@@ -1,8 +1,17 @@
-%h2 List Votables
+%h2
+  Who would you rather
+  %em represent you?
 
 - @votables.each do |votable|
-  .votable
-    = link_to votable do
-      = image_tag votable.image_url, alt: votable, title: votable
-      %span.name= votable
+  %article.votable[votable]
+    = image_tag votable.image_url, alt: votable, title: votable
+    %h3.name= votable
+    %p= votable.description
+
+    .voting
+      .count= pluralize votable.reputation_for(:votes).to_i, "vote"
+
+      = button_to "HOT", vote_votable_path(votable, type: :hot)
+      -#or
+      =# button_to "NOT", vote_votable_path(votable, type: :not)
 

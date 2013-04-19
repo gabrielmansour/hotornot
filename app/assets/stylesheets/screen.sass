@@ -1,5 +1,21 @@
 @import "blueprint"
 
 body
-  :background #bada55
+  :background #fff
   +container
+
+  h1
+    :background
+      :image url("http://www.parl.gc.ca/common/Parl/Images/ParliamentHome.gif")
+      :repeat no-repeat
+      :position 0 100%
+    :float left
+    :height 37px
+    :margin-top 0
+    :padding
+      :left 115px
+      :top 40px
+
+  article.votable
+    +float-left
+    :width 350px

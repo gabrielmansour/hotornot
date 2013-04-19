@@ -7,12 +7,15 @@ gem 'rails', '3.2.13'
 
 gem 'sqlite3'
 
+gem 'haml'
+gem 'inherited_resources'
 
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
   gem 'coffee-rails', '~> 3.2.1'
+  gem 'compass-rails'
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   # gem 'therubyracer', :platforms => :ruby
@@ -36,3 +39,22 @@ gem 'jquery-rails'
 
 # To use debugger
 # gem 'debugger'
+
+group :test do
+  gem 'rspec-rails'
+  gem 'capybara'
+  gem 'cucumber-rails', require: false
+  gem 'database_cleaner'
+  gem 'factory_girl_rails', '~> 4.1.0'
+  gem 'rspec-rails'
+  gem "shoulda-matchers"
+  gem 'capybara-mechanize'
+  gem 'capybara-webkit'
+end
+
+group :development do
+  gem "guard", "~> 1.7.0"
+  gem "guard-bundler", "~> 1.0.0"
+  gem "guard-cucumber", "~> 1.4.0"
+  gem "guard-rspec", "~> 2.5.3"
+end
